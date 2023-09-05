@@ -39,3 +39,29 @@ iframe#tela{
     height: 362px;
     width: 203px;
 }
+section#redes-sociais > a > img{
+    /*Quando diminui largura, já diminui altura, ou vice-versa*/
+    width: 50px;
+    /*separar um pouco as imagens*/
+    margin: 10px;
+    /*Deixar as bordas redondas: basta usar a propriedade border-radius com 50%*/
+    border-radius: 50%;
+    /*fazer uma sombra*/
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.403);
+    /*Qdo colocarmos a pseudo-classe hover com borda, as imagens irão se mexer, para que isso não aconteça:*/
+    box-sizing: border-box;
+}
+/*para deslocar as imagens para esquerda, desloco a "section", não a "img"*/
+section#redes-sociais{
+    text-align: right;
+}
+/*Ao passar mouse por cima das imagens, esta fica com borda branca.*/
+section#redes-sociais > a > img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.605);
+    /*vou movimentar um pouco os botões para esquerda*/
+    transform: translate(-3px, -3px);
+    /*Como desloca pra esquerda, botão levanta, então tem que levantar a sombra também*/
+    box-shadow: 5px 5px 8px black;
+    /*Para os botões se deslocarem mais lentos/rápidos*/
+    transition: transform 0.5s;
+}
